@@ -101,9 +101,7 @@
                         <label for="SInputClaimant">Demandeur*</label>
                         <input name="lbClaimant" class="form-content" id="SInputClaimant"  list=collaborateurList placeholder="Nom d'utilisateur" readonly style="width:70% !important;" onchange="Verify()">
                         <datalist id=collaborateurList>
-                            <?foreach ($this->listeCollaborateurs as $collaborateurs){?>
-                                <option><?=utf8_decode($collaborateurs['lb_nom_prenom_concat']);?></option>
-                            <? } ?>
+
                             <option>ADOMA Galaxie</option>
                         </datalist>  
                             </div>
@@ -114,10 +112,6 @@
                         <div class="formdata" >
                             <label for="inputMessage">Commentaire</label>
                             <textarea name="lbCommentaire" id="inputMessage" placeholder="Taper ici votre commentaire..." style="width:50vh !important; height: 20vh !important;"></textarea>
-
-                            <?php if(!empty($this->datas['dtDateDerniereModification']) || !empty($this->datas['lbModifierPar'])){
-                                echo "<h5 style=\"text-align:right;margin-top:5px;font-size:small;\">Derniére modification le: ".$this->datas['dtDateDerniereModification']." | Par : ".$this->datas['lbModifierPar']."</h5>";
-                            }?>
                         </div>
                         <div class="formdata">
                             <label for="SCanvasSign" >Signature de prêt*</label>
