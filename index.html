@@ -1,4 +1,4 @@
-<?php /** @var kiosque_loan_fusion $this */;?>
+
 <script>
     function savePretForm() {
         document.getElementById('pretFormSrv').value = 'ActionKiosquePret';
@@ -80,7 +80,7 @@
                   <div class="col-xs-r2" style="text-align:left !important; display:block !important;">
                   <div class="formdata">
                         <label for="SInputDate">Date</label>
-                        <input name="dtDate" class="form-content" id="SInputDate" readonly style="color:var(--color-dark-grey)" value="<?=date("Y-m-d");?>" />
+                        <input name="dtDate" class="form-content" id="SInputDate" readonly style="color:var(--color-dark-grey)"  />
                     </div>
                         <div class="formdata" >
                             <label for="SInputTech" >Technicien</label>
@@ -162,7 +162,6 @@
     <!-- popup de validation d'enregistrement -->
     <div class="popup center" id="popupCheck"style="box-shadow: var(--box-shadow);display:none;">
         <div class="icon">
-            <img src="<?=$GLOBALS['CONF']['appli']['url']?>images/icons/check.png"/>
         </div>
         <div class="title" >
             Succès !!
@@ -177,7 +176,6 @@
                         
     <div class="forbidden center" id="popupDelete" style="box-shadow: var(--box-shadow);display:none;">
         <div class="icon">
-            <img src="<?=$GLOBALS['CONF']['appli']['url']?>images/icons/bin.png"/>
         </div>
         <div class="title">
             Restitution !!
@@ -214,23 +212,19 @@
     <!-- popup de validation des cgp -->  
      <div class="popup" id="popup">
         <div class="content">
-       <?php include("CGP.html"); ?>
+      aaaaaaaaaaaaaaaaaaa
             <button onclick="hideCgp()" id="CloseCgp"> J'ai compris</button>
         </div>
     </div>
 </div>
 </div>
 
-<div class="navigation" style="background-image:url(<?=$GLOBALS['CONF']['appli']['url']?>images/18410.jpg);background-size: cover;">
+<div class="navigation" style="background-size: cover;">
 <!--------------------- NAV-BAR -------------------------->
-<?php include ('commun/nav_bar_cds.php');?>
+
 <!------------------- END NAV-BAR ------------------------>
     <div class="body-navigation" id="blur" >
-        <?$debug = 0; 
-        if ($debug==1){
-            echo "<pre>";print_r($GLOBALS['_POST']);echo"</pre>";
-        }
-        ?>
+
             <!-- <div class="optionForms">
                 <h3>Sélectionner le type de saisie :</br></h3>
                 <button id="bntSimpleForm" onclick="javascript:
@@ -285,9 +279,6 @@
                         <label for="SInputClaimant">Demandeur*</label>
                         <input name="lbClaimant" class="form-content" id="SInputClaimant"  list=collaborateurList placeholder="Nom d'utilisateur" style="width:230px !important;" onchange="Verify()">
                         <datalist id=collaborateurList>
-                            <?foreach ($this->listeCollaborateurs as $collaborateurs){?>
-                                <option><?=utf8_decode($collaborateurs['lb_nom_prenom_concat']);?></option>
-                            <? } ?>
                             <option>ADOMA Galaxie</option>
                         </datalist>  
                     </div>
@@ -300,11 +291,11 @@
                 <div class="col-xs-r2" style="height:200px !important;">
                     <div class="formdata">
                         <label for="SInputDate">Date</label>
-                        <input name="dtDate" class="form-content" id="SInputDate" readonly style="color:var(--color-dark-grey)" value="<?=date("Y-m-d");?>" />
+                        <input name="dtDate" class="form-content" id="SInputDate" readonly style="color:var(--color-dark-grey)" />
                     </div>
                     <div class="formdata">
                         <label for="SInputTech">Remis par</label>
-                        <input  name="lbTechnicien" class="form-content" id="SInputTech" value="<?=$_SESSION['utilisateur']->lbShortLogin ;?>" readonly />
+                        <input  name="lbTechnicien" class="form-content" id="SInputTech" " readonly />
                     </div>
                     <div class="formdata">
                         <label for="SInputMat">Matériel</label>
@@ -330,7 +321,7 @@
                 <!-- <div class="formdata" >
                         <input type="checkbox" id="SChbxCGP" onclick="Verify()">
                         J'accepte <a href="#"  title=" " onclick="unhideCgp()" style=" color: black;">les conditions générales de prêt 
-                        <img src="<?=$GLOBALS['CONF']['appli']['url']?>images/icons/info.png" style="height:18px;margin-right:2px;"/>
+                       
                         </a>
                      </div>    -->
                     <!-- </div>        -->
@@ -370,7 +361,7 @@
 
     //     body_pdf.innerHTML = `<div class="form-pdf">
     //                         <div class="logo">
-    //                             <img src="<?=$GLOBALS['CONF']['appli']['url']?>images/logo.bmp">
+    //                            
     //                         </div>
     //                         <div class="form-title-pdf">
     //                             <h4>Prêt de matériel</h4>
